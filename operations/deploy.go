@@ -3,9 +3,9 @@ package operations
 import (
 	"fmt"
 
-	"github.com/netlify/netlifyctl/ui"
 	"github.com/netlify/open-api/go/models"
 	"github.com/netlify/open-api/go/porcelain"
+	"github.com/tryy3/netlifyctl/ui"
 )
 
 const progressColor = "blue"

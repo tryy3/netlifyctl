@@ -1,8 +1,8 @@
 package assets
 
 import (
-	"github.com/netlify/netlifyctl/commands/middleware"
 	"github.com/spf13/cobra"
+	"github.com/tryy3/netlifyctl/commands/middleware"
 )
 
 func Setup(middlewares []middleware.Middleware) *cobra.Command {

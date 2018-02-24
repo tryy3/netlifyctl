@@ -5,10 +5,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/netlify/netlifyctl/commands/middleware"
-	"github.com/netlify/netlifyctl/context"
 	"github.com/netlify/open-api/go/plumbing/operations"
 	"github.com/spf13/cobra"
+	"github.com/tryy3/netlifyctl/commands/middleware"
+	"github.com/tryy3/netlifyctl/context"
 )
 
 type assetsShowCmd struct {

@@ -3,12 +3,12 @@ package login
 import (
 	"os"
 
-	"github.com/netlify/netlifyctl/auth"
-	"github.com/netlify/netlifyctl/commands/middleware"
-	"github.com/netlify/netlifyctl/context"
 	"github.com/netlify/open-api/go/models"
 	"github.com/skratchdot/open-golang/open"
 	"github.com/spf13/cobra"
+	"github.com/tryy3/netlifyctl/auth"
+	"github.com/tryy3/netlifyctl/commands/middleware"
+	"github.com/tryy3/netlifyctl/context"
 )
 
 const defaultClientID = "5edad8f69d47ae8923d0cf0b4ab95ba1415e67492b5af26ad97f4709160bb31b"

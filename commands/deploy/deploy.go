@@ -3,17 +3,19 @@ package deploy
 import (
 	"errors"
 	"fmt"
+	"os/exec"
 	"path/filepath"
+	"runtime"
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
-	"github.com/netlify/netlifyctl/commands/middleware"
-	"github.com/netlify/netlifyctl/configuration"
-	"github.com/netlify/netlifyctl/context"
-	"github.com/netlify/netlifyctl/operations"
-	"github.com/netlify/netlifyctl/ui"
 	netlify "github.com/netlify/open-api/go/porcelain"
+	"github.com/tryy3/netlifyctl/commands/middleware"
+	"github.com/tryy3/netlifyctl/configuration"
+	"github.com/tryy3/netlifyctl/context"
+	"github.com/tryy3/netlifyctl/operations"
+	"github.com/tryy3/netlifyctl/ui"
 )
 
 type deployCmd struct {
@@ -23,6 +25,7 @@ type deployCmd struct {
 	siteID    string
 	siteName  string
 	draft     bool
+	browser   bool
 }
 
 func Setup(middlewares []middleware.Middleware) *cobra.Command {
@@ -39,6 +42,7 @@ func Setup(middlewares []middleware.Middleware) *cobra.Command {
 	ccmd.Flags().StringVarP(&cmd.functions, "functions", "f", "", "function directory to deploy")
 	ccmd.Flags().StringVarP(&cmd.siteID, "site-id", "s", "", "explicitly set a site id instead of relying on configuration")
 	ccmd.Flags().StringVarP(&cmd.siteName, "name", "n", "", "search a site by its name instead of relying on configuration")
+	ccmd.Flags().BoolVarP(&cmd.browser, "browser", "o", false, "open the url in the browser after deploying")
 
 	return middleware.SetupCommand(ccmd, cmd.deploySite, middlewares)
 }
@@ -103,6 +107,10 @@ func (dc *deployCmd) deploySite(ctx context.Context, cmd *cobra.Command, args []
 	fmt.Printf("Deploy done  %s\n", ui.WorldCheck())
 	ui.Bold("    %s\n", u)
 
+	if browser, err := cmd.Flags().GetBool("browser"); err == nil && browser {
+		open(u)
+	}
+
 	return nil
 }
 
@@ -140,4 +148,22 @@ func baseDeploy(cmd *cobra.Command, conf *configuration.Configuration) string {
 	s.Path = path
 
 	return path
+}
+
+// open opens the specified URL in the default browser of the user.
+func open(url string) error {
+	var cmd string
+	var args []string
+
+	switch runtime.GOOS {
+	case "windows":
+		cmd = "cmd"
+		args = []string{"/c", "start"}
+	case "darwin":
+		cmd = "open"
+	default: // "linux", "freebsd", "openbsd", "netbsd"
+		cmd = "xdg-open"
+	}
+	args = append(args, url)
+	return exec.Command(cmd, args...).Start()
 }

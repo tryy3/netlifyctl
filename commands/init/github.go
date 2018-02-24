@@ -8,8 +8,8 @@ import (
 
 	hub "github.com/github/hub/github"
 	"github.com/google/go-github/github"
-	"github.com/netlify/netlifyctl/context"
 	"github.com/netlify/open-api/go/models"
+	"github.com/tryy3/netlifyctl/context"
 )
 
 const (

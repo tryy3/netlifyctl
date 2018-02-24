@@ -1,12 +1,12 @@
 package commands
 
 import (
-	"github.com/netlify/netlifyctl/commands/assets"
-	"github.com/netlify/netlifyctl/commands/deploy"
-	initC "github.com/netlify/netlifyctl/commands/init"
-	"github.com/netlify/netlifyctl/commands/login"
-	"github.com/netlify/netlifyctl/commands/middleware"
-	"github.com/netlify/netlifyctl/commands/sites"
+	"github.com/tryy3/netlifyctl/commands/assets"
+	"github.com/tryy3/netlifyctl/commands/deploy"
+	initC "github.com/tryy3/netlifyctl/commands/init"
+	"github.com/tryy3/netlifyctl/commands/login"
+	"github.com/tryy3/netlifyctl/commands/middleware"
+	"github.com/tryy3/netlifyctl/commands/sites"
 )
 
 func addCommands() {

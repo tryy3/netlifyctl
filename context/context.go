@@ -3,8 +3,8 @@ package context
 import (
 	"context"
 
-	"github.com/netlify/netlifyctl/configuration"
 	"github.com/netlify/open-api/go/porcelain"
+	"github.com/tryy3/netlifyctl/configuration"
 )
 
 type contextKey string

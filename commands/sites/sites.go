@@ -6,9 +6,9 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/netlify/netlifyctl/commands/middleware"
-	"github.com/netlify/netlifyctl/context"
 	"github.com/spf13/cobra"
+	"github.com/tryy3/netlifyctl/commands/middleware"
+	"github.com/tryy3/netlifyctl/context"
 )
 
 func Setup(middlewares []middleware.Middleware) *cobra.Command {

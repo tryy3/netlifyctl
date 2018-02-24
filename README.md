@@ -12,7 +12,7 @@ It uses the [OpenAPI](https://github.com/netlify/open-api) definitions to intera
 
 #### GitHub Releases
 
-Prebuilt [binaries are available for Windows, OS X and Linux](https://github.com/netlify/netlifyctl/releases).
+Prebuilt [binaries are available for Windows, OS X and Linux](https://github.com/tryy3/netlifyctl/releases).
 
 #### Homebrew
 
@@ -26,7 +26,7 @@ brew install netlifyctl
 netlifyctl can be installed from source:
 
 ```sh
-$ go get github.com/netlify/netlifyctl
+$ go get github.com/tryy3/netlifyctl
 ```
 
 ## Usage

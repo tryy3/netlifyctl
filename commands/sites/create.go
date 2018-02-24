@@ -1,13 +1,13 @@
 package sites
 
 import (
-	"github.com/netlify/netlifyctl/commands/middleware"
-	"github.com/netlify/netlifyctl/configuration"
-	"github.com/netlify/netlifyctl/context"
-	"github.com/netlify/netlifyctl/operations"
-	"github.com/netlify/netlifyctl/ui"
 	"github.com/netlify/open-api/go/models"
 	"github.com/spf13/cobra"
+	"github.com/tryy3/netlifyctl/commands/middleware"
+	"github.com/tryy3/netlifyctl/configuration"
+	"github.com/tryy3/netlifyctl/context"
+	"github.com/tryy3/netlifyctl/operations"
+	"github.com/tryy3/netlifyctl/ui"
 )
 
 type siteCreateCmd struct {

@@ -8,10 +8,10 @@ import (
 	"os/exec"
 
 	"github.com/BurntSushi/toml"
-	"github.com/netlify/netlifyctl/commands/middleware"
-	"github.com/netlify/netlifyctl/context"
 	"github.com/netlify/open-api/go/models"
 	"github.com/spf13/cobra"
+	"github.com/tryy3/netlifyctl/commands/middleware"
+	"github.com/tryy3/netlifyctl/context"
 )
 
 const (

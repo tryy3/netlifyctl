@@ -8,8 +8,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/netlify/netlifyctl/context"
 	"github.com/netlify/open-api/go/models"
+	"github.com/tryy3/netlifyctl/context"
 	gitlab "github.com/xanzy/go-gitlab"
 	"golang.org/x/crypto/ssh/terminal"
 )

@@ -9,9 +9,9 @@ import (
 
 	aoperations "github.com/netlify/open-api/go/plumbing/operations"
 
-	"github.com/netlify/netlifyctl/auth"
-	"github.com/netlify/netlifyctl/configuration"
-	"github.com/netlify/netlifyctl/ui"
+	"github.com/tryy3/netlifyctl/auth"
+	"github.com/tryy3/netlifyctl/configuration"
+	"github.com/tryy3/netlifyctl/ui"
 )
 
 var (

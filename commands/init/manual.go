@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/netlify/netlifyctl/context"
-	"github.com/netlify/netlifyctl/ui"
 	"github.com/netlify/open-api/go/models"
+	"github.com/tryy3/netlifyctl/context"
+	"github.com/tryy3/netlifyctl/ui"
 )
 
 type manualConfigurator struct {

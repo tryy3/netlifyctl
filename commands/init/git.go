@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/netlify/netlifyctl/context"
 	"github.com/netlify/open-api/go/models"
+	"github.com/tryy3/netlifyctl/context"
 	"gopkg.in/src-d/go-git.v4"
 )
 

@@ -21,10 +21,10 @@ import (
 	"github.com/netlify/open-api/go/porcelain"
 	apiContext "github.com/netlify/open-api/go/porcelain/context"
 
-	"github.com/netlify/netlifyctl/auth"
-	"github.com/netlify/netlifyctl/configuration"
-	"github.com/netlify/netlifyctl/context"
-	"github.com/netlify/netlifyctl/operations"
+	"github.com/tryy3/netlifyctl/auth"
+	"github.com/tryy3/netlifyctl/configuration"
+	"github.com/tryy3/netlifyctl/context"
+	"github.com/tryy3/netlifyctl/operations"
 )
 
 const (

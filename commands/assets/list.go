@@ -7,9 +7,9 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/netlify/netlifyctl/context"
 	"github.com/netlify/open-api/go/plumbing/operations"
 	"github.com/spf13/cobra"
+	"github.com/tryy3/netlifyctl/context"
 )
 
 func listAssets(ctx context.Context, cmd *cobra.Command, args []string) error {
